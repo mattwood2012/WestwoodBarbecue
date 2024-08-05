@@ -1,19 +1,335 @@
-/*
-body {
-    background: url(images/plank.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+:root {
+    --pic-size: 162px; /*even*/
 }
-*/
 
-/*
-.bdy {
-    background: url(plank.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    max-width: 1400px;
+    min-width: 350px;
+    background-color: black;
 }
-*/
+
+#grad {
+    height: 100%;
+    background-color: black;
+    padding: 0px 0px 8px 0px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-row {
+    width: 100%;
+}
+
+.menu-element {
+    width: Calc(50% - 15px);
+    height: 192px;
+    margin: 5px;
+}
+
+.menu-items-holder {
+    font-family: 'Times New Roman';
+    color: white;
+}
+
+.menu-picture-holder {
+    display: grid;
+}
+
+.picture-background-right {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    width: 100%; /*var(--pic-size);*/ /*142px;*/
+    height: var(--pic-size); /*142px;*/
+    object-fit: cover;
+    border-radius: calc(var(--pic-size) / 2) 0 0 calc(var(--pic-size) / 2);
+}
+
+.picture-background-left {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    width: 100%; /*var(--pic-size);*/ /*142px;*/
+    height: var(--pic-size); /*142px;*/
+    object-fit: cover;
+    border-radius: 0 calc(var(--pic-size) / 2) calc(var(--pic-size) / 2) 0;
+}
+
+.menu-image {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menu-section-header {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    width: 120px;
+    border-radius: 5px;
+    align-content: center;
+    padding: 4px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    margin-left: 0px;
+    color: black;
+    /*font-size: 18px;*/
+    font-weight: bold;
+    display: block;
+}
+
+.menu-item-left {
+    margin-top: 0px;
+    /*margin-bottom: 8px;*/
+    margin-left: 0px;
+    /*font-size: 14px;*/
+    display: grid;
+    /*grid-template-columns: 120px auto;*/
+}
+
+.menu-item-right {
+    margin-top: 0px;
+    /*margin-bottom: 8px;*/
+    margin-left: 0px;
+    /*font-size: 14px;*/
+    display: grid;
+    /*grid-template-columns: 120px auto;*/
+}
+
+<!-- Contact bar -->
+.contact-bar {
+    height: 16px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-item-holder {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    padding: 0px 6px 5px 8px;
+    border-radius: 8px;
+}
+
+.contact-item-img {
+    height: 8px;
+    display: inline;
+    padding: 2px 2px 0px 2px;
+}
+
+.contact-item-link {
+    color: black;
+    font-size: 10px;
+}
+
+.contact-gap {
+    width: 10px;
+}
+
+.meat-section-header-holder {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.meat-section-header {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    /*width: 120px;*/
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    color: black;
+    /*font-size: 24px;*/
+    font-weight: bold;
+    display: block;
+}
+
+.meat-items-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+}
+
+.meat-entry {
+    display: inline-block;
+    white-space: pre-wrap;
+    /*font-size: 18px;*/
+    color: white;
+    /*margin-bottom: 6px;*/
+}
+
+.meat-price-info {
+    color: white;
+    /*font-size: 12px;*/
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .meat-section-header {
+        width: 120px;
+        font-size: 24px;
+    }
+
+    .meat-entry {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .meat-price-info {
+        font-size: 12px;
+    }
+
+    .menu-section-header {
+        font-size: 18px;
+    }
+
+    .menu-item-left {
+        margin-bottom: 8px;
+        font-size: 14px;
+        grid-template-columns: 100px auto;
+    }
+
+    .menu-item-right {
+        margin-bottom: 8px;
+        font-size: 14px;
+        grid-template-columns: 112px auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .meat-section-header {
+        width: 140px;
+        font-size: 26px;
+    }
+
+    .meat-entry {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .meat-price-info {
+        font-size: 12px;
+    }
+
+    .menu-section-header {
+        font-size: 22px;
+    }
+
+    .menu-item-left {
+        margin-bottom: 8px;
+        font-size: 16px;
+        grid-template-columns: 180px auto;
+    }
+
+    .menu-item-right {
+        margin-bottom: 8px;
+        font-size: 16px;
+        grid-template-columns: 180px auto;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .meat-section-header {
+        width: 160px;
+        font-size: 30px;
+    }
+
+    .meat-entry {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .meat-price-info {
+        font-size: 13px;
+    }
+
+    .menu-section-header {
+        font-size: 24px;
+    }
+
+    .menu-item-left {
+        margin-bottom: 4px;
+        font-size: 18px;
+        grid-template-columns: 250px auto;
+    }
+
+    .menu-item-right {
+        margin-bottom: 4px;
+        font-size: 18px;
+        grid-template-columns: 250px auto;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .meat-section-header {
+        width: 180px;
+        font-size: 32px;
+    }
+
+    .meat-entry {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .meat-price-info {
+        font-size: 14px;
+    }
+
+    .menu-section-header {
+        font-size: 26px;
+    }
+
+    .menu-item-left {
+        margin-bottom: 0px;
+        font-size: 22px;
+        grid-template-columns: 300px auto;
+    }
+
+    .menu-item-right {
+        margin-bottom: 0px;
+        font-size: 22px;
+        grid-template-columns: 300px auto;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {
+
+    .meat-section-header {
+        width: 220px;
+        font-size: 34px;
+    }
+
+    .meat-entry {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+   .menu-section-header {
+        font-size: 30px;
+    }
+
+    .menu-item-left {
+        font-size: 26px;
+         grid-template-columns: 350px auto;
+   }
+
+    .menu-item-right {
+        font-size: 26px;
+        grid-template-columns: 350px auto;
+   }
+
+
+}*/
