@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Westwood Barbecue</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        :root {
+            --pic-size: 162px; /*even*/
+        }
+
+        body {
+        }
+
+        #grad {
+            height: 100%;
+            /*background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,1));*/
+            background-color: black;
+            padding: 0px 0px 8px 0px;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu-row {
+            width: 100%;
+        }
+
+        .menu-element {
+            width: Calc(50% - 15px);
+            height: 192px;
+            margin: 5px;
+        }
+
+        .menu-items-holder {
+            font-family: 'Times New Roman';
+            color: white;
+        }
+
+        .menu-picture-holder {
+            display: grid;
+        }
+
+        .picture-background-right {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            width: 100%; /*var(--pic-size);*/ /*142px;*/
+            height: var(--pic-size); /*142px;*/
+            object-fit: cover;
+            border-radius: calc(var(--pic-size) / 2) 0 0 calc(var(--pic-size) / 2);
+        }
+
+        .picture-background-left {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            width: 100%; /*var(--pic-size);*/ /*142px;*/
+            height: var(--pic-size); /*142px;*/
+            object-fit: cover;
+            border-radius: 0 calc(var(--pic-size) / 2) calc(var(--pic-size) / 2) 0;
+        }
+
+        .menu-image {
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .menu-section-header {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            width: 120px;
+            border-radius: 5px;
+            align-content: center;
+            padding: 4px;
+            margin-top: 0px;
+            margin-bottom: 8px;
+            margin-left: 0px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .menu-item-left {
+            margin-top: 0px;
+            margin-bottom: 8px;
+            margin-left: 0px;
+            font-size: 14px;
+            display: grid;
+            grid-template-columns: 120px auto;
+        }
+
+        .menu-item-right {
+            margin-top: 0px;
+            margin-bottom: 8px;
+            margin-left: 0px;
+            font-size: 14px;
+            display: grid;
+            grid-template-columns: 120px auto;
+        }
+
+        <!-- Contact bar -->
+        .contact-bar {
+            height: 16px;
+            width: 100%;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-item-holder {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            padding: 0px 6px 5px 8px;
+            border-radius: 8px;
+        }
+
+        .contact-item-img {
+            height: 8px;
+            display: inline;
+            padding: 2px 2px 0px 2px;
+        }
+
+        .contact-item-link {
+            color: black;
+            font-size: 10px;
+        }
+
+        .contact-gap {
+            width: 10px;
+        }
+
+        .meat-section-header-holder {
+            display: flex;
+            justify-content: center;
+            width: 100%
+        }
+
+        .meat-section-header {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            width: 120px;
+            border-radius: 5px;
+            text-align: center;
+            padding: 4px;
+            margin-top: 0px;
+            margin-bottom: 4px;
+            margin-left: 0px;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .meat-items-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+            width: 100%;
+            padding: 15px 0px 15px 0px;
+        }
+
+        .meat-item {
+            display: flex;
+            justify-content: left;
+            color: white;
+            font-size: 18px;
+            background-color: red;
+        }
+
+        .meat-price {
+            display: flex;
+            justify-content: left;
+            color: white;
+            font-size: 18px;
+            background-color: green;
+        }
+
+        .meat-entry {
+            display:inline-block;
+            white-space:pre-wrap;
+            font-size:18px;
+            color:white;
+            margin-bottom: 6px;
+        }
+    </style>
+
+    <!--<script class="bbq">
+
+        window.addEventListener("load", (event) => {
+            console.log("page is fully loaded");
+
+            var scrpts = document.getElementsByTagName("script");
+
+            for (let i = scrpts.length - 1; i >= 0; i--) {
+                if (scrpts[i].className !== "bbq") {
+                    console.log("Removing script #: " + i + " in window load event");
+                    scrpts[i].remove();
+                }
+            }
+        });
+
+        function handleOnLoad() {
+            var scrpts = document.getElementsByTagName("script");
+
+            console.log("handleOnLoad script count (pre remove): " + scrpts.length);
+
+            for (let i = 0; i < scrpts.length; i++) {
+
+                console.log("classname " + i + ": " + scrpts[i].className);
+            }
+
+            for (let i = scrpts.length - 1; i >= 0; i--) {
+                if (scrpts[i].className !== "bbq") {
+                    console.log("Removing script #: " + i + " handleOnLoad");
+                    scrpts[i].remove();
+                }
+            }
+
+            const ad = document.body.firstChild;
+            if (ad.innerHTML) {
+                console.log("firstChild innerHTML: " + ad.innerHTML)
+            }
+
+            const viewerContainer = document.getElementById('viewerContainer');
+            if (viewerContainer) {
+                console.log("viewerContainer.style.cssText: " + viewerContainer.style.cssText)
+            }
+
+            console.log("script count (post remove): " + scrpts.length);
+
+            for (let i = 0; i < scrpts.length; i++) {
+                console.log("classname " + i + ": " + scrpts[i].className);
+            }
+         }
+
+    </script>-->
+
+</head>
+<body>
+
+    <div id="grad">
+
+        <div>
+            <img src="/images/logo1.jpg" class="logo" />
+        </div>
+
+        <div class="meat-section-header-holder">
+            <div class="meat-section-header" onclick="console.log('width: ' + window.innerWidth);">
+                <span>MEATS</span>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <div class="meat-entry" style="font-size: 12px;">&#09;&#09;&#09;&#09;&#09;&#09;&#09;&#09;&#09;&#09;Price per lb</div><br />
+            <div class="meat-entry">Brisket&#09;&#09;&#09;&#09;&#09;$20</div><br />
+            <div class="meat-entry">Pork Spare Ribs&#09;&#09;&#09;$17</div><br />
+            <div class="meat-entry">Pulled Pork&#09;&#09;&#09;&#09;$16</div><br />
+            <div class="meat-entry">Pork Belly Burnt Ends&#09;&#09;$13</div><br />
+            <div class="meat-entry">Turkey Breast&#09;&#09;&#09;&#09;$10</div><br />
+        </div>
+
+        <img src="/images/meaty1.jpg" style="width:100%; margin-top:15px; margin-bottom:15px" />
+
+        <div class="menu-row">
+            <span class="menu-element menu-picture-holder" style="float: left;">
+                <span class="picture-background-left change-bg" style=" display: flex; justify-content:right">
+                    <img class="menu-img" src="/images/sides.jpg" style="position: absolute; margin-top: 10px; float: right; margin-right: 10px; height: 142px; object-fit: cover; border-radius: 50%" />
+                </span>
+            </span>
+            <span class="menu-element  menu-items-holder" style="float: right">
+
+                <span class="menu-section-header change-bg">
+                    <span style="display:flex; justify-content:center;">SIDES</span>
+                </span>
+
+                <span class="menu-item-right" style="grid-template-columns: 100px auto;">
+                    <span>Chili</span>
+                    <span style="text-align: left;">Small $4</span>
+                </span>
+
+                <span class="menu-item-right" style="grid-template-columns: 100px auto;">
+                    <span>Coleslaw</span>
+                    <span style="text-align: left;">Large $6</span>
+                </span>
+
+                <span class="menu-item-right" style="grid-template-columns: 100px auto;">
+                    <span>Potato Salad</span>
+                </span>
+
+                <span class="menu-item-right" style="grid-template-columns: 100px auto;">
+                    <span>Barbecue Beans</span>
+                </span>
+
+            </span>
+        </div>
+
+        <div class="menu-row">
+            <span class="menu-element menu-items-holder" style="float: left">
+                <span class="menu-section-header change-bg">
+                    <span style="display:flex; justify-content:center;">SWEETS</span>
+                </span>
+
+                <span class="menu-item-left">
+                    <span>Banoffee Pie</span>
+                    <span style="text-align: left;">$5</span>
+                </span>
+
+                <span class="menu-item-left">
+                    <span>Brownie</span>
+                    <span style="text-align: left;">$3</span>
+                </span>
+
+                <span class="menu-item-left">
+                    <span>Vanilla Ice Cream</span>
+                    <span style="text-align: left;">$2</span>
+                </span>
+
+            </span>
+            <span class="menu-element menu-picture-holder" style="float: right">
+                <span class="picture-background-right change-bg" style="float: left"></span>
+                <img class="menu-img" src="/images/desserts.jpg" style="position:absolute; margin-top: 10px;  margin-left: 10px; height:142px; object-fit:cover; border-radius:50%" />
+            </span>
+        </div>
+
+        <div class="menu-row">
+            <span class="menu-element menu-picture-holder" style="float: left;">
+                <span class="picture-background-left change-bg" style=" display: flex; justify-content:right">
+                    <img class="menu-img" src="/images/drinks.jpg" style="position: absolute; margin-top: 10px; float: right; margin-right: 10px; height: 142px; object-fit: cover; border-radius: 50%" />
+                </span>
+            </span>
+            <span class="menu-element  menu-items-holder" style="float: right">
+                <span class="menu-section-header change-bg">
+                    <span style="display:flex; justify-content:center;">DRINKS</span>
+                </span>
+
+                <span class="menu-item-right">
+                    <span>Iced Tea</span>
+                    <span style="text-align: left;">$3</span>
+                </span>
+
+                <span class="menu-item-right">
+                    <span>Lemonade</span>
+                    <span style="text-align: left;">$3</span>
+                </span>
+
+                <span class="menu-item-right">
+                    <span>Can of Coke</span>
+                    <span style="text-align: left;">$3</span>
+                </span>
+
+                <span class="menu-item-right">
+                    <span>Can of Diet Coke</span>
+                    <span style="text-align: left;">$2</span>
+                </span>
+
+                <span class="menu-item-right">
+                    <span>Bottled Water</span>
+                    <span style="text-align: left;">$2</span>
+                </span>
+
+            </span>
+        </div>
+
+        <!-- Contact bar -->
+        <span class="contact-bar" style="height:22px; width: 100%; display: flex; justify-content: center">
+            <span class="contact-item-holder"><img class="contact-item-img" src="/images/phone-icon.png" /><a class="contact-item-link" href="tel:2109600450">(210) 960-0450</a></span>
+            <span class="contact-gap"></span>
+            <span class="contact-item-holder"><img class="contact-item-img" src="/images/envelope-icon.png" /><a class="contact-item-link" href="mailto:WestwoodBarbecue@gmail.com">WestwoodBarbecue@gmail.com</a></span>
+            <span class="contact-gap"></span>
+            <span class="contact-item-holder"><img class="contact-item-img" src="/images/envelope-icon.png" /><a class="contact-item-link" href="links.html">Links</a></span>
+        </span>
+    </div>
+
+</body>
+</html>

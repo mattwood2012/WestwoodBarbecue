@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Westwood Barbecue Links</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+
+        body {
+            background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+            height: 100vh;
+            margin: 0;
+        }
+
+        .main-div {
+            /*background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));*/
+            height: 100vh;
+            margin: 0;
+        }
+
+        .logo {
+            /*display: inline-block;*/
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 12px
+        }
+
+        .insta {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 192px;
+            height: 192px;
+        }
+
+        .plink {
+            margin-left: 8px;
+        }
+
+        .alink plink {
+            font-size: 16px;
+            color: black;
+        }
+    </style>
+
+    <!--<script class="bbq">
+
+        window.addEventListener("load", (event) => {
+            console.log("page is fully loaded");
+
+            const scrpts = document.getElementsByTagName("script");
+
+            for (let i = scrpts.length - 1; i >= 0; i--) {
+                if (scrpts[i].className !== "bbq") {
+                    console.log("Removing script #: " + i + " in window load event");
+                    scrpts[i].remove();
+                }
+            }
+
+            const ad = document.body.firstChild;
+            if (ad.innerHTML) {
+                console.log("firstChild innerHTML: " + ad.innerHTML)
+            }
+
+            const viewerContainer = document.getElementById('viewerContainer');
+            if (viewerContainer) {
+                console.log("viewerContainer.style.cssText: " + viewerContainer.style.cssText)
+            }
+       });
+
+        function handleOnLoad() {
+            const scrpts = document.getElementsByTagName("script");
+
+            for (let i = scrpts.length - 1; i >= 0; i--) {
+                if (scrpts[i].className !== "bbq") {
+                    scrpts[i].remove();
+                }
+            }
+
+            const ad = document.body.firstChild;
+            if (ad) {
+                console.log("firstChild innerHTML: " + ad.innerHTML)
+            }
+
+            const viewerContainer = document.getElementById('viewerContainer');
+            if (viewerContainer) {
+                console.log("viewerContainer.style.cssText: " + viewerContainer.style.cssText)
+            }
+        }      
+
+    </script>-->
+
+</head>
+<body> <!--onload="handleOnLoad()"-->
+
+    <div class="main-div">
+
+        <div style="text-align:center;" class="header">
+            <img src="/images/logo1.jpg" class="logo" />
+        </div>
+
+        <img src="/images/insta.jpg" class="insta" />
+        <p class="plink"> Instagram:<a href="https://www.instagram.com/westwood_barbecue" class="alink">Westwood Barbecue Instagram</a></p>
+
+        <p class="plink"> Phone: <a href="tel:2109600450" class="alink">(210) 960-0450</a></p>
+
+        <p class="plink"> Email: <a href="mailto:WestwoodBarbecue@gmail.com" class="alink">WestwoodBarbecue@gmail.com</a></p>
+
+    </div>
+</body>
+</html>
