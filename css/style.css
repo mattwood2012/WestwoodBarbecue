@@ -3,7 +3,6 @@
 }
 
 body {
-    max-width: 1400px;
     min-width: 350px;
     background-color: black;
 }
@@ -19,78 +18,140 @@ body {
     height: 100%;
 }
 
-.menu-row {
-    width: 100%;
+.center-holder {
+    display: flex;
+    justify-content: center;
+    width: 100%
 }
 
-.menu-element {
-    width: Calc(50% - 15px);
-    height: 192px;
-    margin: 5px;
+.meat-section-title {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    color: black;
+    font-weight: bold;
+    display: block;
+    /*margin-bottom: 8px;
+    width: 120px;*/
+    /*font-size: 24px;*/
 }
 
-.menu-items-holder {
-    font-family: 'Times New Roman';
+
+.meat-price-info-row {
+    display: grid; 
     color: white;
+    /* grid-template-columns: 220px 54px;  */
+    /* font-size: 11px;  */
 }
 
-.menu-picture-holder {
-    display: grid;
+.meat-item-row {
+    display: grid; 
+    color: white; 
+    /* grid-template-columns: 220px 30px;  */
+    /* font-size: 20px;  */
+    /* margin-bottom: 4px;  */
+}
+  
+.meat-picture {
+    width: 100%; 
+    margin-top:15px;
+    margin-bottom:15px    
+}
+
+.menu-row {
+    display: grid; 
+    width: 100%; 
+    grid-template-columns: 50% 50%;
+    /* height: 172px; */
+    /* margin-top: 12px; */
+}
+
+.picture-background {
+    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    /* height: 152px;
+    margin-top: 10px; */
 }
 
 .picture-background-right {
-    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
-    width: 100%; /*var(--pic-size);*/ /*142px;*/
-    height: var(--pic-size); /*142px;*/
-    object-fit: cover;
-    border-radius: calc(var(--pic-size) / 2) 0 0 calc(var(--pic-size) / 2);
+    justify-content: left;
+    /* border-radius: 142px 0px 0px 142px; */
 }
 
 .picture-background-left {
-    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
-    width: 100%; /*var(--pic-size);*/ /*142px;*/
-    height: var(--pic-size); /*142px;*/
-    object-fit: cover;
-    border-radius: 0 calc(var(--pic-size) / 2) calc(var(--pic-size) / 2) 0;
+    justify-content: right; 
+    /* border-radius: 0px 142px 142px 0px; */
 }
 
 .menu-image {
     object-fit: cover;
     border-radius: 50%;
+    /* height: 142px;
+    width: 142px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px; */
+}
+
+
+.side-items-holder {
+    display: grid;
+    width: 100%; 
+    column-gap: 1%; 
+    color: white;
+    /* grid-template-columns: 108px auto; 
+    margin-top: 10px;
+    margin-left: 8px; 
+    height: 130px; */
+}
+    
+.sweet-items-holder {
+    display: grid;
+    /* grid-template-columns: auto 140px 30px;
+    height: 120px;
+    margin-top: 5px; */
+
+}
+
+.drink-items-holder {
+    display: grid;
+    width: 100%;
+    column-gap: 1%;
+    color: white;
+    /* grid-template-columns: 132px auto;
+    margin-top: 10px;
+    margin-left: 8px;
+    height: 160px;  */
 }
 
 .menu-section-header {
     background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
-    width: 120px;
-    border-radius: 5px;
+    /* display:block;  */
+    justify-content:center; 
     align-content: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    /* font-size: 20px;
+    width: 120px;
     padding: 4px;
     margin-top: 0px;
     margin-bottom: 8px;
-    margin-left: 0px;
-    color: black;
-    /*font-size: 18px;*/
-    font-weight: bold;
-    display: block;
+    margin-left: 0px; */
+    /* display: block; */
 }
 
-.menu-item-left {
-    margin-top: 0px;
-    /*margin-bottom: 8px;*/
-    margin-left: 0px;
-    /*font-size: 14px;*/
-    display: grid;
-    /*grid-template-columns: 120px auto;*/
-}
+.menu-item {
+    color: white;
+    /* font-size: 16px; */
+    }
 
-.menu-item-right {
-    margin-top: 0px;
-    /*margin-bottom: 8px;*/
-    margin-left: 0px;
-    /*font-size: 14px;*/
-    display: grid;
-    /*grid-template-columns: 120px auto;*/
-}
 
 .contact-bar {
     height: 16px;
@@ -122,213 +183,460 @@ body {
     width: 10px;
 }
 
-.meat-section-header-holder {
-    display: flex;
-    justify-content: center;
-    width: 100%
-}
+/* Extra small devices (phones, 479px and down) */
+@media only screen and (max-width: 479px) {
 
-.meat-section-header {
-    background-image: linear-gradient(to top, rgba(235,46,8,1), rgba(255,127,39,1));
-    /*width: 120px;*/
-    border-radius: 5px;
-    text-align: center;
-    padding: 4px;
-    margin-top: 0px;
-    margin-bottom: 4px;
-    margin-left: 0px;
-    color: black;
-    /*font-size: 24px;*/
-    font-weight: bold;
-    display: block;
-}
+    /* #grad {
+        background-color: brown;
+    } */
 
-.meat-items-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 20px;
-    width: 100%;
-    padding: 15px 0px 15px 0px;
-}
-
-.meat-entry {
-    display: inline-block;
-    white-space: pre-wrap;
-    /*font-size: 18px;*/
-    color: white;
-    /*margin-bottom: 6px;*/
-}
-
-.meat-price-info {
-    color: white;
-    /*font-size: 12px;*/
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-    .meat-section-header {
-        width: 120px;
-        font-size: 24px;
+    .meat-section-title {
+        width: 160px;
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+ 
+    .meat-price-info-row {
+        grid-template-columns: 220px 54px; 
+        font-size: 11px; 
+    }
+ 
+    .meat-item-row {
+        font-size: 20px; 
+        grid-template-columns: 220px 30px; 
+        margin-bottom: 4px; 
+    }
+ 
+    .menu-row {
+        height: 172px;
+        margin-top: 12px;
     }
 
-    .meat-entry {
-        font-size: 18px;
-        margin-bottom: 6px;
+    .picture-background {
+        height: 152px;
+        margin-top: 10px;
+    }
+    
+    .picture-background-right {
+        border-radius: 142px 0px 0px 142px;
+    }
+    
+    .picture-background-left {
+        border-radius: 0px 142px 142px 0px;
+    }
+    
+    .menu-image {
+        height: 142px;
+        width: 142px;
+        margin-top: 5px;
+    }
+    .menu-image-left {
+        margin-right: 5px;
+    }
+    .menu-image-right {
+        margin-left: 5px;
     }
 
-    .meat-price-info {
-        font-size: 12px;
+    .side-items-holder {
+        grid-template-columns: 108px auto; 
+        margin-top: 10px;
+        margin-left: 8px; 
+        height: 130px;
+    }
+        
+    .sweet-items-holder {
+        grid-template-columns: auto 140px 30px;
+        height: 120px;
+        margin-top: 5px;
+
+    }
+    
+    .drink-items-holder {
+        grid-template-columns: 132px auto;
+        margin-top: 10px;
+        margin-left: 8px;
+        height: 160px; 
     }
 
     .menu-section-header {
+        font-size: 22px;
+        width: 120px;
+        padding: 4px;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        }
+
+    .menu-item {
+        font-size: 16px;
+    }
+   
+}
+
+/* Small devices (phones, 48px and up) */
+@media only screen and (min-width: 480px) {
+
+    /* #grad {
+        background-color: purple;
+    } */
+
+    .meat-section-title {
+        width: 160px;
+        font-size: 28px;
+        margin-bottom: 8px;
+
+    }
+ 
+    .meat-price-info-row {
+        grid-template-columns: 220px 54px; 
+        font-size: 11px; 
+    }
+ 
+    .meat-item-row {
+        font-size: 20px; 
+        grid-template-columns: 220px 30px; 
+        margin-bottom: 4px; 
+    }
+ 
+    .menu-row {
+        height: 172px;
+        margin-top: 12px;
+    }
+
+    .picture-background {
+        height: 152px;
+        margin-top: 10px;
+    }
+    
+    .picture-background-right {
+        border-radius: 142px 0px 0px 142px;
+    }
+    
+    .picture-background-left {
+        border-radius: 0px 142px 142px 0px;
+    }
+    
+    .menu-image {
+        height: 142px;
+        width: 142px;
+        margin-top: 5px;
+    }
+    .menu-image-left {
+        margin-right: 5px;
+    }
+    .menu-image-right {
+        margin-left: 5px;
+    }
+
+    .side-items-holder {
+        grid-template-columns: 128px auto; 
+        margin-top: 10px;
+        margin-left: 28px; 
+        height: 130px;
+    }
+        
+    .sweet-items-holder {
+        grid-template-columns: auto 170px 40px;
+        height: 120px;
+        margin-top: 5px;
+
+    }
+    
+    .drink-items-holder {
+        grid-template-columns: 152px auto;
+        margin-top: 10px;
+        margin-left: 28px;
+        height: 160px; 
+    }
+
+    .menu-section-header {
+        font-size: 22px;
+        width: 120px;
+        padding: 4px;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        }
+
+    .menu-item {
         font-size: 18px;
     }
 
-    .menu-item-left {
-        margin-bottom: 8px;
-        font-size: 14px;
-        grid-template-columns: 100px auto;
-    }
-
-    .menu-item-right {
-        margin-bottom: 8px;
-        font-size: 14px;
-        grid-template-columns: 112px auto;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-    .meat-section-header {
-        width: 140px;
-        font-size: 26px;
-    }
+    /* #grad {
+        background-color: blue;
+    } */
 
-    .meat-entry {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-
-    .meat-price-info {
-        font-size: 12px;
-    }
-
-    .menu-section-header {
-        font-size: 22px;
-    }
-
-    .menu-item-left {
-        margin-bottom: 8px;
-        font-size: 16px;
-        grid-template-columns: 180px auto;
-    }
-
-    .menu-item-right {
-        margin-bottom: 8px;
-        font-size: 16px;
-        grid-template-columns: 180px auto;
-    }
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-    .meat-section-header {
+    .meat-section-title {
         width: 160px;
-        font-size: 30px;
+        font-size: 28px;
+        margin-bottom: 8px;
+
+    }
+ 
+    .meat-price-info-row {
+        grid-template-columns: 280px 54px; 
+        font-size: 11px; 
+    }
+ 
+    .meat-item-row {
+        font-size: 22px; 
+        grid-template-columns: 280px 40px; 
+        margin-bottom: 4px; 
+    }
+ 
+    .menu-row {
+        height: 172px;
+        margin-top: 12px;
     }
 
-    .meat-entry {
-        font-size: 22px;
-        margin-bottom: 10px;
+    .picture-background {
+        height: 152px;
+        margin-top: 10px;
+    }
+    
+    .picture-background-right {
+        border-radius: 142px 0px 0px 142px;
+    }
+    
+    .picture-background-left {
+        border-radius: 0px 142px 142px 0px;
+    }
+    
+    .menu-image {
+        height: 142px;
+        width: 142px;
+        margin-top: 5px;
+    }
+    .menu-image-left {
+        margin-right: 5px;
+    }
+    .menu-image-right {
+        margin-left: 5px;
     }
 
-    .meat-price-info {
-        font-size: 13px;
+    .side-items-holder {
+        grid-template-columns: 128px auto; 
+        margin-top: 10px;
+        margin-left: 28px; 
+        height: 130px;
+    }
+        
+    .sweet-items-holder {
+        grid-template-columns: auto 170px 40px;
+        height: 120px;
+        margin-top: 5px;
+
+    }
+    
+    .drink-items-holder {
+        grid-template-columns: 152px auto;
+        margin-top: 10px;
+        margin-left: 28px;
+        height: 160px; 
     }
 
     .menu-section-header {
-        font-size: 24px;
-    }
+        font-size: 22px;
+        width: 120px;
+        padding: 4px;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        }
 
-    .menu-item-left {
-        margin-bottom: 4px;
+    .menu-item {
         font-size: 18px;
-        grid-template-columns: 250px auto;
     }
+   
 
-    .menu-item-right {
-        margin-bottom: 4px;
-        font-size: 18px;
-        grid-template-columns: 250px auto;
-    }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    .meat-section-header {
-        width: 180px;
+    /* #grad {
+        background-color: green;
+    } */
+
+    .meat-section-title {
+        width: 160px;
         font-size: 32px;
+        margin-bottom: 8px;
+
+    }
+ 
+    .meat-price-info-row {
+        grid-template-columns: 320px 54px; 
+        font-size: 11px; 
+    }
+ 
+    .meat-item-row {
+        font-size: 24px; 
+        grid-template-columns: 320px 40px; 
+        margin-bottom: 4px; 
+    }
+ 
+    .menu-row {
+        height: 172px;
+        margin-top: 12px;
     }
 
-    .meat-entry {
-        font-size: 24px;
-        margin-bottom: 10px;
+    .picture-background {
+        height: 152px;
+        margin-top: 10px;
+    }
+    
+    .picture-background-right {
+        border-radius: 142px 0px 0px 142px;
+    }
+    
+    .picture-background-left {
+        border-radius: 0px 142px 142px 0px;
+    }
+    
+    .menu-image {
+        height: 142px;
+        width: 142px;
+        margin-top: 5px;
+    }
+    .menu-image-left {
+        margin-right: 5px;
+    }
+    .menu-image-right {
+        margin-left: 5px;
     }
 
-    .meat-price-info {
-        font-size: 14px;
+    .side-items-holder {
+        grid-template-columns: 128px auto; 
+        margin-top: 10px;
+        margin-left: 28px; 
+        height: 130px;
+    }
+        
+    .sweet-items-holder {
+        grid-template-columns: auto 170px 40px;
+        height: 120px;
+        margin-top: 5px;
+
+    }
+    
+    .drink-items-holder {
+        grid-template-columns: 152px auto;
+        margin-top: 10px;
+        margin-left: 28px;
+        height: 160px; 
     }
 
     .menu-section-header {
-        font-size: 26px;
-    }
-
-    .menu-item-left {
-        margin-bottom: 0px;
         font-size: 22px;
-        grid-template-columns: 300px auto;
-    }
+        width: 120px;
+        padding: 4px;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        }
 
-    .menu-item-right {
-        margin-bottom: 0px;
-        font-size: 22px;
-        grid-template-columns: 300px auto;
+    .menu-item {
+        font-size: 18px;
     }
 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/*@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 
-    .meat-section-header {
-        width: 220px;
+    /* #grad {
+        background-color: cyan;
+    } */
+    
+    .meat-section-title {
+        width: 160px;
         font-size: 34px;
+        margin-bottom: 8px;
+
+    }
+ 
+    .meat-price-info-row {
+        grid-template-columns: 380px 64px; 
+        font-size: 12px; 
+    }
+ 
+    .meat-item-row {
+        font-size: 24px; 
+        grid-template-columns: 380px 40px; 
+        margin-bottom: 4px; 
+    }
+ 
+    .menu-row {
+        height: 172px;
+        margin-top: 12px;
     }
 
-    .meat-entry {
-        font-size: 26px;
-        margin-bottom: 10px;
+    .picture-background {
+        height: 152px;
+        margin-top: 10px;
+    }
+    
+    .picture-background-right {
+        border-radius: 142px 0px 0px 142px;
+    }
+    
+    .picture-background-left {
+        border-radius: 0px 142px 142px 0px;
+    }
+    
+    .menu-image {
+        height: 142px;
+        width: 142px;
+        margin-top: 5px;
+    }
+    .menu-image-left {
+        margin-right: 5px;
+    }
+    .menu-image-right {
+        margin-left: 5px;
     }
 
-   .menu-section-header {
-        font-size: 30px;
+    .side-items-holder {
+        grid-template-columns: 128px auto; 
+        margin-top: 10px;
+        margin-left: 28px; 
+        height: 130px;
+    }
+        
+    .sweet-items-holder {
+        grid-template-columns: auto 170px 40px;
+        height: 120px;
+        margin-top: 5px;
+
+    }
+    
+    .drink-items-holder {
+        grid-template-columns: 152px auto;
+        margin-top: 10px;
+        margin-left: 28px;
+        height: 160px; 
     }
 
-    .menu-item-left {
-        font-size: 26px;
-         grid-template-columns: 350px auto;
-   }
+    .menu-section-header {
+        font-size: 22px;
+        width: 120px;
+        padding: 4px;
+        margin-top: 0px;
+        margin-bottom: 8px;
+        margin-left: 0px;
+        }
 
-    .menu-item-right {
-        font-size: 26px;
-        grid-template-columns: 350px auto;
-   }
+    .menu-item {
+        font-size: 18px;
+    }
+   
 
 
-}*/
+}
